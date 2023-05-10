@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Library Management</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body style="font-family: Calibri, Helvetica, sans-serif;  
+    background-color: pink; ">
+      <div class="container">
+        <h1 class="display-4 text-center py-1">Library Management System</h1>
+        
+        <div class="jumbotron p-3 shadow-sm">
+          <form id="create_form" action='/create-item' method="POST">
+            <div class="d-flex align-items-center">
+              <input id="create_field" name='title' autofocus autocomplete="off" placeholder="Enter Title" class="form-control mr-3" type="text" style="flex: 1;">
+              <input id="create_field" name='author' autofocus autocomplete="off" placeholder="Author Name" class="form-control mr-3" type="text" style="flex: 1;">
+              <input id="create_field" name='price' autofocus autocomplete="off" placeholder="Enter Price" class="form-control mr-3" type="text" style="flex: 1;">
+              <input id="create_field" name='category' autofocus autocomplete="off" placeholder="Enter Category" class="form-control mr-3" type="text" style="flex: 1;">
+              <button class="add_item btn btn-primary">Add New Book</button>
+            </div>
+          </form>
+        </div>
+
+      <ul id="ul" class="ul-container d-flex" style="flex-wrap: wrap;
+      grid-gap: 1em;">
+        
+        
+      </ul>
+        
+
+      <form action='/logout' method="POST">
+        <button class="add_item btn btn-secondary mb-2"> Logout <button>
+      </form>
+      
+      <form action='/logout_from_all_devices' method="POST">
+        <button class="add_item btn btn-danger"> Logout from all devices <button>
+      </form>
+
+      </div>
+      <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+      <script src="/browser.js"> 
+      </script>
+    </body>
+    </html>
